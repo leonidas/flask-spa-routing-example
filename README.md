@@ -1,8 +1,9 @@
 # Flask SPA routing example
 
-1. Serve API views from /api/v1
-2. Serve static files from /static
-3. Serve index.html for everything else
+1. Serve API views from `/api/v1` only for logged in users
+2. Serve static files in development only for logged in users
+3. Serve `index.html` for everything else in development for logged in users
+4. Redirect to `/login` (`static/login.html`) for everything else
 
 ## Getting started
 
