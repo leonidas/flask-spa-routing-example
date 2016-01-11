@@ -17,9 +17,9 @@ if DEBUG:
     def static_file(path):
         return send_from_directory('static', path)
 
-
-    @app.errorhandler(404)
-    def send_index(e):
+    @app.route('/', defaults={'path': ''})
+    @app.route("/<path:path>")
+    def send_index(path):
         return send_from_directory('static', 'index.html')
 
 
